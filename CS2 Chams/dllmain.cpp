@@ -187,12 +187,12 @@ HRESULT __stdcall hookD3D11Present(IDXGISwapChain* pSwapChain, UINT SyncInterval
 	if (!sUniformColorHidden)
 		GenerateShader(pDevice, &sUniformColorHidden, chams_color_hidden[0], chams_color_hidden[1], chams_color_hidden[2]);
 	
-	if (!sUniformColorWeapons)
-		GenerateShader(pDevice, &sUniformColorWeapons, chams_color_weapons[0], chams_color_weapons[1], chams_color_weapons[2]);
+	if (!sUniformColorHands)
+		GenerateShader(pDevice, &sUniformColorHands, chams_color_hands[0], chams_color_hands[1], chams_color_hands[2]);
 
 	static float last_color_visible[3] = { -1.0f, -1.0f, -1.0f };
 	static float last_color_hidden[3] = { -1.0f, -1.0f, -1.0f };
-	static float last_color_weapons[3] = { -1.0f, -1.0f, -1.0f };
+	static float last_color_hands[3] = { -1.0f, -1.0f, -1.0f };
 	
 	if (last_color_visible[0] != chams_color_visible[0] || last_color_visible[1] != chams_color_visible[1] || last_color_visible[2] != chams_color_visible[2])
 	{
@@ -218,16 +218,16 @@ HRESULT __stdcall hookD3D11Present(IDXGISwapChain* pSwapChain, UINT SyncInterval
 		last_color_hidden[2] = chams_color_hidden[2];
 	}
 	
-	if (last_color_weapons[0] != chams_color_weapons[0] || last_color_weapons[1] != chams_color_weapons[1] || last_color_weapons[2] != chams_color_weapons[2])
+	if (last_color_hands[0] != chams_color_hands[0] || last_color_hands[1] != chams_color_hands[1] || last_color_hands[2] != chams_color_hands[2])
 	{
-		if (sUniformColorWeapons) {
-			sUniformColorWeapons->Release();
-			sUniformColorWeapons = NULL;
+		if (sUniformColorHands) {
+			sUniformColorHands->Release();
+			sUniformColorHands = NULL;
 		}
-		GenerateShader(pDevice, &sUniformColorWeapons, chams_color_weapons[0], chams_color_weapons[1], chams_color_weapons[2]);
-		last_color_weapons[0] = chams_color_weapons[0];
-		last_color_weapons[1] = chams_color_weapons[1];
-		last_color_weapons[2] = chams_color_weapons[2];
+		GenerateShader(pDevice, &sUniformColorHands, chams_color_hands[0], chams_color_hands[1], chams_color_hands[2]);
+		last_color_hands[0] = chams_color_hands[0];
+		last_color_hands[1] = chams_color_hands[1];
+		last_color_hands[2] = chams_color_hands[2];
 	}
 
 
@@ -271,7 +271,7 @@ HRESULT __stdcall hookD3D11Present(IDXGISwapChain* pSwapChain, UINT SyncInterval
 		ImGui::Checkbox("Chams", &chams);
 		ImGui::ColorEdit3("Visible Color", chams_color_visible, ImGuiColorEditFlags_NoInputs);
 		ImGui::ColorEdit3("Hidden Color", chams_color_hidden, ImGuiColorEditFlags_NoInputs);
-		ImGui::ColorEdit3("Hand Color", chams_color_weapons, ImGuiColorEditFlags_NoInputs);
+		ImGui::ColorEdit3("Hands Color", chams_color_hands, ImGuiColorEditFlags_NoInputs);
 		const char* render_modes[] = { "Default", "Wireframe" };
 		ImGui::Combo("Render Mode", &render_mode, render_modes, IM_ARRAYSIZE(render_modes));
 		ImGui::End();
@@ -383,7 +383,7 @@ void __stdcall hookD3D11DrawIndexedInstanced(ID3D11DeviceContext* pContext, UINT
 			if (Stride == 28 && chams == 1)
 			{
 				pContext->PSGetShader(&oPixelShaderA, 0, 0);
-				pContext->PSSetShader(sUniformColorWeapons, NULL, NULL);
+				pContext->PSSetShader(sUniformColorHands, NULL, NULL);
 			}
 
 			phookD3D11DrawIndexedInstanced(pContext, IndexCount, InstanceCount, StartIndexLocation, BaseVertexLocation, StartInstanceLocation);
@@ -414,7 +414,7 @@ void __stdcall hookD3D11DrawIndexedInstanced(ID3D11DeviceContext* pContext, UINT
 			if (Stride == 28 && chams == 1)
 			{
 				pContext->PSGetShader(&oPixelShaderA, 0, 0);
-				pContext->PSSetShader(sUniformColorWeapons, NULL, NULL);
+				pContext->PSSetShader(sUniformColorHands, NULL, NULL);
 			}
 
 			phookD3D11DrawIndexedInstanced(pContext, IndexCount, InstanceCount, StartIndexLocation, BaseVertexLocation, StartInstanceLocation);
