@@ -1,0 +1,40 @@
+﻿  dllmain.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\dllmain.cpp(546,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_impl_dx11.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\backends\imgui_impl_dx11.cpp(686,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_impl_win32.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\backends\imgui_impl_win32.cpp(1002,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui.cpp(2273,10): error C2006: '#include': expected "FILENAME" or <FILENAME>
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui.cpp(3122,9): warning C4005: 'va_copy': macro redefinition
+      C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui.cpp(3120,9):
+      see previous definition of 'va_copy'
+  
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui.cpp(18289,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_demo.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(190,9): warning C4005: 'IM_NEWLINE': macro redefinition
+      C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(188,9):
+      see previous definition of 'IM_NEWLINE'
+  
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(206,9): warning C4005: 'PRId64': macro redefinition
+      C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(203,9):
+      see previous definition of 'PRId64'
+  
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(207,9): warning C4005: 'PRIu64': macro redefinition
+      C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(204,9):
+      see previous definition of 'PRIu64'
+  
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(224,9): warning C4005: 'IMGUI_CDECL': macro redefinition
+      C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(222,9):
+      see previous definition of 'IMGUI_CDECL'
+  
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_demo.cpp(11089,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_draw.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_draw.cpp(134,10): error C2006: '#include': expected "FILENAME" or <FILENAME>
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_draw.cpp(159,10): error C2006: '#include': expected "FILENAME" or <FILENAME>
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_draw.cpp(6740,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_tables.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_tables.cpp(4580,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_widgets.cpp
+C:\Users\phili\source\repos\CS2 Chams\CS2 Chams\ImGui\imgui_widgets.cpp(10842,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Generating Code...

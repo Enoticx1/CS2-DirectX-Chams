@@ -1,0 +1,6 @@
+﻿  dllmain.cpp
+  minhook.lib(hook.obj) : .netmodule ou module MSIL compilé avec /GL trouvé ; redémarrage de l'édition de liens avec /LTCG ; ajoutez /LTCG à la ligne de commande de l'édition de liens pour améliorer les performances de l'Éditeur de liens
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'LIBCMT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+  Génération de code en cours
+  Fin de la génération du code
+  CS2 Chams.vcxproj -> E:\projekt\cs2\CS2 Chams (INSERT TO SHOW MENU)\x64\Release\CS2 Chams.dll
