@@ -24,9 +24,9 @@ bool teamchams = 0;
 float chams_alpha = 1.0f;
 ID3D11BlendState* TransparencyState = NULL;
 
-float chams_color_visible[3] = { 1.0f, 1.0f, 0.0f };
-float chams_color_hidden[3] = { 0.0f, 0.0f, 1.0f };
-float chams_color_weapons[3] = { 1.0f, 0.0f, 1.0f };
+float chams_color_visible[3] = { 0.0f, 1.0f, 0.0f };
+float chams_color_hidden[3] = { 1.0f, 0.0f, 0.0f };
+float chams_color_hands[3] = { 1.0f, 1.0f, 1.0f };
 int render_mode = 0;
 
 int check_draw_result = 0;
@@ -59,7 +59,7 @@ ID3D11PixelShader* sGrey = NULL;
 
 ID3D11PixelShader* sUniformColorVisible = NULL;
 ID3D11PixelShader* sUniformColorHidden = NULL;
-ID3D11PixelShader* sUniformColorWeapons = NULL;
+ID3D11PixelShader* sUniformColorHands = NULL;
 
 ID3D11PixelShader* oPixelShaderA;
 
@@ -172,9 +172,9 @@ void SaveCfg()
 	fout << "ChamsColorHiddenR " << chams_color_hidden[0] << endl;
 	fout << "ChamsColorHiddenG " << chams_color_hidden[1] << endl;
 	fout << "ChamsColorHiddenB " << chams_color_hidden[2] << endl;
-	fout << "ChamsColorWeaponsR " << chams_color_weapons[0] << endl;
-	fout << "ChamsColorWeaponsG " << chams_color_weapons[1] << endl;
-	fout << "ChamsColorWeaponsB " << chams_color_weapons[2] << endl;
+	fout << "ChamsColorHandsR " << chams_color_hands[0] << endl;
+	fout << "ChamsColorHandsG " << chams_color_hands[1] << endl;
+	fout << "ChamsColorHandsB " << chams_color_hands[2] << endl;
 	fout << "RenderMode " << render_mode << endl;
 	fout.close();
 }
@@ -193,9 +193,9 @@ void LoadCfg()
 	fin >> Word >> chams_color_hidden[0];
 	fin >> Word >> chams_color_hidden[1];
 	fin >> Word >> chams_color_hidden[2];
-	fin >> Word >> chams_color_weapons[0];
-	fin >> Word >> chams_color_weapons[1];
-	fin >> Word >> chams_color_weapons[2];
+	fin >> Word >> chams_color_hands[0];
+	fin >> Word >> chams_color_hands[1];
+	fin >> Word >> chams_color_hands[2];
 	fin >> Word >> render_mode;
 	fin.close();
 }
